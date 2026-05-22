@@ -4,7 +4,7 @@ version: 2
 sources:
   - name: raw
     database: WIKIPEDIA
-    schema: RAW
+    schema: PUBLIC
     tables:
       - name: wiki_pageviews
         description: "Raw Wikipedia pageview data ingested by Python pipeline"
