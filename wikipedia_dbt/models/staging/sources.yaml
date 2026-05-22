@@ -1,0 +1,19 @@
+# models/staging/sources.yml
+version: 2
+
+sources:
+  - name: raw
+    database: WIKIPEDIA
+    schema: RAW
+    tables:
+      - name: wiki_pageviews
+        description: "Raw Wikipedia pageview data ingested by Python pipeline"
+        columns:
+          - name: page_date
+            description: "Date of the pageviews"
+          - name: article
+            description: "Article name"
+          - name: views
+            description: "Total views on that day"
+          - name: rank
+            description: "Rank by views for that day"

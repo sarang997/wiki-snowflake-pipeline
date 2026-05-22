@@ -1,0 +1,15 @@
+# models/staging/schema.yml
+version: 2
+
+models:
+  - name: stg_wiki_pageviews
+    description: "Cleaned Wikipedia pageview data"
+    columns:
+      - name: page_date
+        tests: [not_null]
+      - name: article_name
+        tests: [not_null]
+      - name: views
+        tests: [not_null]
+      - name: rank
+        tests: [not_null]
