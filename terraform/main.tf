@@ -102,3 +102,21 @@ resource "snowflake_grant_privileges_to_account_role" "sysadmin_wh" {
     object_name = snowflake_warehouse.wiki_wh.name
   }
 }
+
+resource "snowflake_grant_privileges_to_account_role" "sysadmin_analytics_schema" {
+  account_role_name = "SYSADMIN"
+  privileges        = ["CREATE TABLE", "CREATE VIEW", "USAGE"]
+
+  on_schema {
+    schema_name = "\"WIKIPEDIA\".\"ANALYTICS\""
+  }
+}
+
+resource "snowflake_grant_privileges_to_account_role" "sysadmin_staging_schema" {
+  account_role_name = "SYSADMIN"
+  privileges        = ["CREATE TABLE", "CREATE VIEW", "USAGE"]
+
+  on_schema {
+    schema_name = "\"WIKIPEDIA\".\"STAGING\""
+  }
+}
