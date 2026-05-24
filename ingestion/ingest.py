@@ -1,9 +1,9 @@
-import os
 import sys
 import time
 import logging
 import requests
 import snowflake.connector
+import os
 from datetime import date, timedelta
 
 #logging

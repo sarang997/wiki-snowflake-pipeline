@@ -1,3 +1,4 @@
 requests
 snowflake-connector-python
 dbt-snowflake
+python-dotenv
